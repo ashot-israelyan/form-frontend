@@ -7,7 +7,6 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 import { setMessage } from './store/appReducer';
 
 import './App.css';
-import logo from './logo.svg';
 
 const AsyncComponent = Loadable({
   loader: () => import(/* webpackChunkName: "myNamedChunk" */ './SomeComponent'),
@@ -38,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className={'App-logo'} alt={'logo'}/>
+          <img src="./logo.svg" className={'App-logo'} alt={'logo'}/>
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-intro">
