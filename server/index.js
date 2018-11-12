@@ -1,20 +1,31 @@
-import express from 'express';
-import Loadable from 'react-loadable';
+const md5File = require("md5-file");
+const path = require("path");
 
-import indexController from './controllers';
+const ignoreStyles = require("ignore-styles");
+const register = ignoreStyles.default;
 
-const PORT = 3000;
+const extensions = [".gif", ".jpeg", ".jpg", ".png", ".svg"];
 
-const app = express();
+register(ignoreStyles.DEFAULT_EXTENSIONS, (mod, filename) => {
+  if (!extensions.find(f => filename.endsWith(f))) {
+    return ignoreStyles.noOp();
+  }
 
-app.use(indexController);
+  const hash = md5File.sync(filename).slice(0, 8);
+  const bn = path.basename(filename).replace(/(\.\w{3})$/, `.${hash}$1`);
 
-Loadable.preloadAll().then(() => {
-  app.listen(PORT, error => {
-    if (error) {
-      return console.log('something bad happened', error);
-    }
-
-    console.log("listening on " + PORT + "...");
-  });
+  mod.exports = `/static/media/${bn}`;
 });
+
+require("@babel/polyfill");
+require("@babel/register")({
+  ignore: [/\/(build|node_modules)\//],
+  presets: ["@babel/preset-env", "@babel/preset-react"],
+  plugins: [
+    "@babel/plugin-syntax-dynamic-import",
+    "dynamic-import-node",
+    "react-loadable/babel"
+  ]
+});
+
+require("./server");
