@@ -5,6 +5,7 @@ import Loadable from "react-loadable";
 import { Frontload } from "react-frontload";
 import { ConnectedRouter } from "connected-react-router";
 import createStore from "./store";
+import '@babel/polyfill';
 
 import App from "./app/app";
 import "./index.css";

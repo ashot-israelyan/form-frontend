@@ -19,21 +19,6 @@ const links = [
     text: "Profile 2"
   },
   {
-    to: "/login",
-    text: "Login",
-    auth: false
-  },
-  {
-    to: "/dashboard",
-    text: "Dashboard",
-    auth: true
-  },
-  {
-    to: "/logout",
-    text: "Logout",
-    auth: true
-  },
-  {
     to: "/this-is-broken",
     text: "Broken Page"
   }
@@ -59,21 +44,7 @@ export default ({ isAuthenticated, current }) => (
   <header id={"header"}>
     <h1 id="title">My awesome website</h1>
     <ul id="links">
-      {links.map((link, index) => {
-        const TheLink = <HeaderLink key={index} current={current} {...link} />;
-
-        if (link.hasOwnProperty("auth")) {
-          if (link.auth && isAuthenticated) {
-            return TheLink;
-          } else if (!link.auth && !isAuthenticated) {
-            return TheLink;
-          }
-
-          return null;
-        }
-
-        return TheLink;
-      })}
+      {links.map((link, index) => <HeaderLink key={index} current={current} {...link} />)}
     </ul>
   </header>
 );
