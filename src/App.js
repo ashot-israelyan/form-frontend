@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div id={'app'}>
-        <Header isAuthenticated={this.props.isAuthenticated} current={this.props.location.pathname} />
+        <Header current={this.props.location.pathname} />
         <div id={'content'}>
           <Routes />
         </div>
@@ -28,15 +28,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated,
-});
-
 const mapDispatchToProps = dispatch => bindActionCreators({ establishCurrentUser }, dispatch);
 
 export default withRouter(
   connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps
   )(App)
 );

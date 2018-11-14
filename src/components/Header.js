@@ -40,7 +40,7 @@ const HeaderLink = ({ to, text, current }) => (
   </li>
 );
 
-export default ({ isAuthenticated, current }) => (
+export default ({ current }) => (
   <header id={'header'}>
     <h1 id="title">My awesome website</h1>
     <ul id="links">
