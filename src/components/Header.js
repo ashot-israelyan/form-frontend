@@ -4,23 +4,19 @@ import { Link } from 'react-router-dom';
 const links = [
   {
     to: '/',
-    text: 'Homepage',
+    text: 'Reforma Box',
+  },
+  {
+    to: '/menu',
+    text: 'Menu',
   },
   {
     to: '/about',
     text: 'About',
   },
   {
-    to: '/profile/1',
-    text: 'Profile 1',
-  },
-  {
-    to: '/profile/2',
-    text: 'Profile 2',
-  },
-  {
-    to: '/this-is-broken',
-    text: 'Broken Page',
+    to: '/contacts',
+    text: 'Contacts',
   },
 ];
 
@@ -34,18 +30,14 @@ const isCurrent = (to, current) => {
   return false;
 };
 
-const HeaderLink = ({ to, text, current }) => (
-  <li className={isCurrent(to, current) ? 'current' : ''}>
-    <Link to={to}>{text}</Link>
-  </li>
-);
-
 export default ({ current }) => (
   <header id={'header'}>
     <h1 id="title">My awesome website</h1>
     <ul id="links">
       {links.map((link, index) => (
-        <HeaderLink key={index} current={current} {...link} />
+        <li key={index} className={isCurrent(link.to, current) ? 'current' : ''}>
+          <Link to={link.to}>{link.text}</Link>
+        </li>
       ))}
     </ul>
   </header>
