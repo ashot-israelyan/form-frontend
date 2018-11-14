@@ -9,8 +9,6 @@ import { isServer } from './store';
 import Header from './components/Header';
 import Routes from './routes';
 
-import './app.css';
-
 class App extends Component {
   componentDidMount() {
     if (!isServer) {

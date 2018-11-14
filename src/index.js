@@ -5,9 +5,10 @@ import Loadable from 'react-loadable';
 import { Frontload } from 'react-frontload';
 import { ConnectedRouter } from 'connected-react-router';
 import createStore from './store';
-import '@babel/polyfill';
-
 import App from './App';
+
+import '@babel/polyfill';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 const { store, history } = createStore();
