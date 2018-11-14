@@ -9,7 +9,7 @@ const initialState = {
   },
 };
 
-if (!isServer) {
+if (!isServer && typeof window !== 'undefined') {
   initialState.screen.layout = window.innerWidth <= 768 ? 'mobile' : window.innerWidth <= 992 ? 'tablet' : 'desktop';
   initialState.screen.size = window.innerWidth;
 }
