@@ -8,7 +8,6 @@ import createStore from './store';
 import App from './App';
 
 import '@babel/polyfill';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 const { store, history } = createStore();

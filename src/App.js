@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
-
-import { establishCurrentUser } from './modules/auth';
-import { isServer } from './store';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 import Header from './components/Header';
 import Routes from './routes';
+import { updateMenu } from './modules/settings';
 
 class App extends Component {
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.props.updateMenu);
+  }
+
   componentDidMount() {
-    if (!isServer) {
-      this.props.establishCurrentUser();
-    }
+    window.addEventListener('resize', this.props.updateMenu);
   }
 
   render() {
     return (
-      <div id={'app'}>
-        <Header current={this.props.location.pathname} />
-        <div id={'content'}>
+      <div>
+        <Header />
+        <div>
           <Routes />
         </div>
       </div>
@@ -28,7 +28,7 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ establishCurrentUser }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ updateMenu }, dispatch);
 
 export default withRouter(
   connect(
