@@ -10,7 +10,7 @@ import { Frontload, frontloadServerRender } from "react-frontload";
 import Loadable from "react-loadable";
 
 import createStore from "../src/store";
-import App from "../src/app/app";
+import App from "../src/App";
 import manifest from "../build/asset-manifest.json";
 
 export default (req, res) => {

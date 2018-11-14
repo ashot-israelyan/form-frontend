@@ -1,11 +1,11 @@
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie';
 
-export const AUTHENTICATE = "auth/AUTHENTICATE";
-export const SET_CURRENT_USER = "auth/SET_CURRENT_USER";
+export const AUTHENTICATE = 'auth/AUTHENTICATE';
+export const SET_CURRENT_USER = 'auth/SET_CURRENT_USER';
 
 const initialState = {
   isAuthenticated: false,
-  currentUser: {}
+  currentUser: {},
 };
 
 export default (state = initialState, action) => {
@@ -13,12 +13,12 @@ export default (state = initialState, action) => {
     case AUTHENTICATE:
       return {
         ...state,
-        isAuthenticated: action.authenticated
+        isAuthenticated: action.authenticated,
       };
     case SET_CURRENT_USER:
       return {
         ...state,
-        currentUser: action.user
+        currentUser: action.user,
       };
     default:
       return state;
@@ -29,14 +29,14 @@ export const setCurrentUser = user => dispatch => {
   return new Promise(resolve => {
     dispatch({
       type: SET_CURRENT_USER,
-      user
+      user,
     });
 
-    Cookies.set("mywebsite", user);
+    Cookies.set('mywebsite', user);
 
     dispatch({
       type: AUTHENTICATE,
-      authenticated: true
+      authenticated: true,
     });
 
     resolve(user);
@@ -45,7 +45,7 @@ export const setCurrentUser = user => dispatch => {
 
 export const establishCurrentUser = () => dispatch => {
   return new Promise(resolve => {
-    let userFromCookie = Cookies.getJSON("mywebsite");
+    let userFromCookie = Cookies.getJSON('mywebsite');
 
     if (userFromCookie) {
       dispatch(setCurrentUser(userFromCookie));
@@ -61,7 +61,7 @@ export const loginUser = (email, password) => dispatch => {
     const user = {
       email,
       password,
-      name: "Awesome User"
+      name: 'Awesome User',
     };
 
     dispatch(setCurrentUser(user));
@@ -73,15 +73,15 @@ export const logoutUser = () => dispatch => {
   return new Promise(resolve => {
     dispatch({
       type: AUTHENTICATE,
-      authenticated: false
+      authenticated: false,
     });
 
     dispatch({
       type: SET_CURRENT_USER,
-      user: {}
+      user: {},
     });
 
-    Cookies.remove("mywebsite");
+    Cookies.remove('mywebsite');
     resolve({});
   });
 };

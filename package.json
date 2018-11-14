@@ -15,6 +15,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "forcedomain": "^1.0.0",
+    "history": "^4.7.2",
     "ignore-styles": "^5.0.1",
     "js-cookie": "^2.2.0",
     "md5-file": "^4.0.0",
@@ -40,7 +41,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "cross-env NODE_ENV=production node ./server/index.js"
+    "serve": "cross-env NODE_ENV=production node ./server/index.js",
+    "prettier-run": "prettier --write 'src/**/*.js'"
   },
   "browserslist": [
     ">0.2%",

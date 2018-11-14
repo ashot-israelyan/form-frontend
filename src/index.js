@@ -1,14 +1,14 @@
-import React from "react";
-import { render, hydrate } from "react-dom";
-import { Provider } from "react-redux";
-import Loadable from "react-loadable";
-import { Frontload } from "react-frontload";
-import { ConnectedRouter } from "connected-react-router";
-import createStore from "./store";
+import React from 'react';
+import { render, hydrate } from 'react-dom';
+import { Provider } from 'react-redux';
+import Loadable from 'react-loadable';
+import { Frontload } from 'react-frontload';
+import { ConnectedRouter } from 'connected-react-router';
+import createStore from './store';
 import '@babel/polyfill';
 
-import App from "./app/app";
-import "./index.css";
+import App from './App';
+import './index.css';
 
 const { store, history } = createStore();
 
@@ -22,7 +22,7 @@ const Application = (
   </Provider>
 );
 
-const root = document.querySelector("#root");
+const root = document.querySelector('#root');
 
 if (root.hasChildNodes() === true) {
   Loadable.preloadReady().then(() => {
