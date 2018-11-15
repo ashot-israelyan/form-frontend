@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { frontloadConnect } from 'react-frontload';
-import { logoutUser } from '../modules/auth';
+import { Helmet } from 'react-helmet';
 
-import Page from '../components/Page';
-import logo from '../images/logo.svg';
+import HowItWorks from '../components/HowItWorks';
+import { logoutUser } from '../modules/auth';
 
 const frontload = async props => await props.logoutUser();
 
-const Home = () => (
-  <Page id="homepage">
-    <p>Here's our homepage. All are welcome.</p>
-    <img src={logo} alt="Homepage" style={{ width: '400px' }} />
-  </Page>
-);
+class Home extends Component {
+  render() {
+    return (
+      <div>
+        <Helmet
+          htmlAttributes={{
+            lang: 'en',
+            itemscope: undefined,
+          }}
+          title={'Form Healthy Food'}
+          link={[
+            {
+              rel: 'canonical',
+              href: `http://localhost:4000/${this.props.location.pathname}`,
+            },
+          ]}
+        />
+        <HowItWorks />
+      </div>
+    );
+  }
+}
 
 const mapDispatchToProps = dispatch => bindActionCreators({ logoutUser }, dispatch);
 
