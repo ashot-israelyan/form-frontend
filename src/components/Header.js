@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { reveal as MobileMenu } from 'react-burger-menu';
+import Sidebar from 'react-sidebar';
 import logo from '../images/logo.svg';
 
 class Header extends Component {
-  menuItems = ['Reforma Box', 'Menu', 'About', 'Contacts'];
+  constructor() {
+    super();
+
+    this.menuItems = ['Reforma Box', 'Menu', 'About', 'Contacts'];
+    this.state = {
+      sidebarOpen: false,
+    };
+    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+  }
 
   onMenuItemClick = e => {
     e.preventDefault();
   };
+
+  onSetSidebarOpen(open) {
+    this.setState({ sidebarOpen: open });
+  }
 
   renderDesktopMenu() {
     return (
@@ -30,14 +42,34 @@ class Header extends Component {
   }
 
   renderMobileMenu() {
+    const { sidebarOpen } = this.state;
     return (
-      <MobileMenu right>
-        {this.menuItems.map((item, i) => (
-          <a key={i} className={'menu-item'} href={'/'}>
-            {item}
-          </a>
-        ))}
-      </MobileMenu>
+      <Sidebar
+        sidebar={
+          <nav className={'mobile-menu-items'}>
+            {this.menuItems.map((item, i) => (
+              <a href={'/'} key={i} onClick={this.onMenuItemClick}>
+                {item}
+              </a>
+            ))}
+          </nav>
+        }
+        open={sidebarOpen}
+        onSetOpen={this.onSetSidebarOpen}
+        styles={{ sidebar: { background: 'white' } }}
+        rootClassName={'mobile-menu'}
+        sidebarClassName={'mobile-menu-sidebar'}
+      >
+        <button
+          className={`mobile-menu-button hamburger hamburger--squeeze ${sidebarOpen ? 'is-active' : ''}`}
+          type="button"
+          onClick={() => this.onSetSidebarOpen(true)}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner" />
+          </span>
+        </button>
+      </Sidebar>
     );
   }
 
@@ -58,6 +90,7 @@ class Header extends Component {
           </div>
         </div>
         <div className="background">
+          <div className={'overlay'} />
           <img
             src="https://storage.googleapis.com/tutor-directory-schools/dir-static/photo-1460518451285-97b6aa326961.jpeg"
             alt="Form"

@@ -1,29 +1,31 @@
+@import "menu";
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @font-face {
   font-family: 'Lucida Grande';
-  src: url('./fonts/LucidaGrande.eot');
-  src: url('./fonts/LucidaGrande.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/LucidaGrande.woff2') format('woff2'),
-  url('./fonts/LucidaGrande.woff') format('woff'),
-  url('./fonts/LucidaGrande.ttf') format('truetype'),
-  url('./fonts/LucidaGrande.svg#LucidaGrande') format('svg');
+  src: url('../fonts/LucidaGrande.eot');
+  src: url('../fonts/LucidaGrande.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LucidaGrande.woff2') format('woff2'),
+  url('../fonts/LucidaGrande.woff') format('woff'),
+  url('../fonts/LucidaGrande.ttf') format('truetype'),
+  url('../fonts/LucidaGrande.svg#LucidaGrande') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lucida Grande';
-  src: url('./fonts/LucidaGrande-Bold.eot');
-  src: url('./fonts/LucidaGrande-Bold.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/LucidaGrande-Bold.woff2') format('woff2'),
-  url('./fonts/LucidaGrande-Bold.woff') format('woff'),
-  url('./fonts/LucidaGrande-Bold.ttf') format('truetype'),
-  url('./fonts/LucidaGrande-Bold.svg#LucidaGrande-Bold') format('svg');
+  src: url('../fonts/LucidaGrande-Bold.eot');
+  src: url('../fonts/LucidaGrande-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LucidaGrande-Bold.woff2') format('woff2'),
+  url('../fonts/LucidaGrande-Bold.woff') format('woff'),
+  url('../fonts/LucidaGrande-Bold.ttf') format('truetype'),
+  url('../fonts/LucidaGrande-Bold.svg#LucidaGrande-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -53,7 +55,6 @@ body {
       align-items: center;
 
       .logo {
-        width: 9%;
         img {
           width: 107px;
         }
@@ -101,6 +102,41 @@ body {
           width: 0;
         }
       }
+
+      .mobile-menu {
+        height: 100vh;
+
+        .mobile-menu-sidebar {
+          width: 300px;
+        }
+
+        .mobile-menu-button {
+          float: right;
+          outline: none;
+          padding: 25px;
+
+          .hamburger-inner {
+            background-color: #fff;
+
+            &:before, &:after {
+              background-color: #fff;
+            }
+          }
+        }
+
+        .mobile-menu-items {
+          padding: 10px 8%;
+
+          a {
+            display: block;
+            color: rgba(0, 0, 0, 0.65);
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 64px;
+          }
+        }
+      }
     }
   }
 
@@ -110,6 +146,17 @@ body {
     height: 100%;
     overflow: hidden;
     opacity: 0.75;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #1b1b1b;
+      opacity: 0.5;
+      z-index: 1;
+    }
 
     img {
       position: absolute;
@@ -132,6 +179,10 @@ body {
     color: #fff;
     text-align: center;
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
     h4 {
       font-family: 'Montserrat', sans-serif;
       font-size: 16px;
@@ -150,6 +201,10 @@ body {
       font-stretch: normal;
       line-height: 1.14;
       letter-spacing: -1px;
+
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
     }
 
     h3 {
@@ -163,6 +218,10 @@ body {
       letter-spacing: -0.2px;
       max-width: 600px;
       margin: 0 auto;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
     }
   }
 }
