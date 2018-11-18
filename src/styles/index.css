@@ -410,7 +410,7 @@ body {
       display: flex;
       justify-content: space-between;
       background-color: #ffffff;
-      padding: 40px 20px 50px; }
+      padding: 40px 15px 50px; }
       @media (max-width: 767px) {
         .calculator-container .calculator .inner {
           flex-direction: column; } }
@@ -474,7 +474,7 @@ body {
                 font-size: 14px; } }
             @media (max-width: 480px) {
               .calculator-container .calculator .inner .gym-calendar .gym-labels .label {
-                font-size: 13px; } }
+                font-size: 12px; } }
             .calculator-container .calculator .inner .gym-calendar .gym-labels .label:first-child:not(.active) {
               margin-left: 20px; }
               @media (max-width: 991px) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Sidebar from 'react-sidebar';
-import logo from '../images/logo.png';
+import logo from '../images/logo-white.png';
 import bgImage from '../images/header.png';
 
 class Header extends Component {
