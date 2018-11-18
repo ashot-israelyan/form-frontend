@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Sidebar from 'react-sidebar';
-import logo from '../images/logo-white.png';
 import bgImage from '../images/header.png';
 
 class Header extends Component {
@@ -83,7 +82,7 @@ class Header extends Component {
         <div className="top">
           <div className="container">
             <div className="logo">
-              <img src={logo} alt="Logo" />
+              <img src={'/logo.png'} alt="Logo" />
             </div>
 
             {layout !== 'mobile' && this.renderDesktopMenu()}
