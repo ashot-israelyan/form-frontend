@@ -1,0 +1,125 @@
+.how-it-works {
+  background-color: rgba(255, 255, 255, 0.5);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+
+  .top {
+    text-align: center;
+
+    h2 {
+      @include heading2();
+    }
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .how-it-works-item {
+      max-width: 390px;
+      width: 100%;
+      display: flex;
+      align-self: flex-start;
+      justify-content: space-between;
+
+      @media (max-width: 767px) {
+        max-width: 100%;
+        width: auto;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .left {
+        margin-right: 30px;
+        margin-top: -50px;
+
+        @media (max-width: 991px) {
+          margin-right: 20px;
+          margin-top: -20px;
+        }
+
+        .number {
+          font-family: 'Montserrat', sans-serif;
+          opacity: 0.2;
+          font-size: 136px;
+          font-weight: bold;
+          letter-spacing: normal;
+          text-align: center;
+
+          @media (max-width: 991px) {
+            font-size: 70px;
+          }
+        }
+
+        .custom-icon {
+          font-size: 35px;
+          vertical-align: 0.5em;
+          margin-left: -20px;
+
+          @media (max-width: 991px) {
+            font-size: 20px;
+            margin-left: 0;
+          }
+        }
+      }
+
+      .right {
+        h3 {
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: 900;
+          text-transform: uppercase;
+          line-height: 1.71;
+          letter-spacing: 2px;
+          color: #1b1b1b;
+        }
+
+        p {
+          font-size: 16px;
+          font-family: 'Roboto', sans-serif;
+          line-height: 1.5;
+          color: #9b9b9b;
+        }
+      }
+
+      &.first {
+        .left {
+          .number {
+            color: #2c99ed;
+          }
+        }
+
+        .right {
+          @media (max-width: 767px) {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      &.second {
+        .left {
+          .number {
+            color: #78379d;
+          }
+        }
+      }
+
+      &.third {
+        .left {
+          .number {
+            color: #edc054;
+          }
+        }
+      }
+    }
+  }
+}

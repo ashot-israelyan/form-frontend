@@ -1,12 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const icon = {
-  fontSize: 35,
-  verticalAlign: '0.5em',
-  marginLeft: '-20px',
-};
-
 const HowItWorks = () => (
   <div className={'how-it-works'}>
     <div className={'top'}>
@@ -17,7 +11,7 @@ const HowItWorks = () => (
       <div className={'first how-it-works-item'}>
         <div className={'left'}>
           <span className={'number'}>1</span>
-          <FontAwesomeIcon icon={'envelope'} style={icon} />
+          <FontAwesomeIcon icon={'envelope'} className={'custom-icon'} />
         </div>
         <div className={'right'}>
           <h3>Ваше личное меню</h3>
@@ -30,7 +24,7 @@ const HowItWorks = () => (
       <div className={'second how-it-works-item'}>
         <div className={'left'}>
           <span className={'number'}>2</span>
-          <FontAwesomeIcon icon={'truck'} style={icon} />
+          <FontAwesomeIcon icon={'truck'} className={'custom-icon'} />
         </div>
         <div className={'right'}>
           <h3>Доставка</h3>
@@ -40,7 +34,7 @@ const HowItWorks = () => (
       <div className={'third how-it-works-item'}>
         <div className={'left'}>
           <span className={'number'}>3</span>
-          <FontAwesomeIcon icon={'clone'} style={icon} />
+          <FontAwesomeIcon icon={'clone'} className={'custom-icon'} />
         </div>
         <div className={'right'}>
           <h3>Наслаждайся здоровьем</h3>

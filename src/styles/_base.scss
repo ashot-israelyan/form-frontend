@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('../fonts/LucidaGrande.eot');
+  src: url('../fonts/LucidaGrande.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LucidaGrande.woff2') format('woff2'),
+  url('../fonts/LucidaGrande.woff') format('woff'),
+  url('../fonts/LucidaGrande.ttf') format('truetype'),
+  url('../fonts/LucidaGrande.svg#LucidaGrande') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('../fonts/LucidaGrande-Bold.eot');
+  src: url('../fonts/LucidaGrande-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/LucidaGrande-Bold.woff2') format('woff2'),
+  url('../fonts/LucidaGrande-Bold.woff') format('woff'),
+  url('../fonts/LucidaGrande-Bold.ttf') format('truetype'),
+  url('../fonts/LucidaGrande-Bold.svg#LucidaGrande-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$roboto: 'Roboto', sans-serif;
+$lucia: 'Lucida Grande', sans-serif;
+$monserat: 'Montserrat', sans-serif;
+
+@mixin heading2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  text-align: center;
+  color: #1b1b1b;
+  margin: 0;
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+
+.divider {
+  max-width: 165px;
+  width: 100%;
+  height: 4px;
+  background-color: #40be65;
+  border: none;
+  margin: 17px auto 0;
+}
+
+.rc-slider-handle:active {
+  &:active, &:focus {
+    box-shadow: 0 0 0 15px rgba(163, 104, 197, 0.3)!important;
+  }
+}

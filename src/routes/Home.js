@@ -5,6 +5,7 @@ import { frontloadConnect } from 'react-frontload';
 import { Helmet } from 'react-helmet';
 
 import HowItWorks from '../components/HowItWorks';
+import Calculator from '../components/Calculator';
 import { logoutUser } from '../modules/auth';
 
 const frontload = async props => await props.logoutUser();
@@ -27,6 +28,7 @@ class Home extends Component {
           ]}
         />
         <HowItWorks />
+        <Calculator />
       </div>
     );
   }
