@@ -6,14 +6,11 @@ import { Frontload } from 'react-frontload';
 import { ConnectedRouter } from 'connected-react-router';
 import createStore from './store';
 import App from './App';
-import { updateMenu } from './modules/settings';
 
 import '@babel/polyfill';
 import './styles/index.css';
 
 const { store, history } = createStore();
-
-store.dispatch(updateMenu());
 
 const Application = (
   <Provider store={store}>

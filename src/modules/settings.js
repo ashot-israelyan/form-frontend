@@ -4,8 +4,8 @@ export const UPDATE_MENU = 'settings/UPDATE_MENU';
 
 const initialState = {
   screen: {
-    layout: 'desktop',
-    size: 1920,
+    layout: 'mobile',
+    size: 480,
   },
 };
 

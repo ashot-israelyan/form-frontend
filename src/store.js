@@ -31,11 +31,11 @@ export default (url = '/') => {
 
   const initialState = !isServer ? window.__PRELOADED_STATE__ : {};
 
+  const store = createStore(connectRouter(history)(rootReducer), initialState, composedEnhancers);
+
   if (!isServer) {
     delete window.__PRELOADED_STATE__;
   }
-
-  const store = createStore(connectRouter(history)(rootReducer), initialState, composedEnhancers);
 
   return {
     store,
