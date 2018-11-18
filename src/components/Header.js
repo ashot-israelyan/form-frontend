@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Sidebar from 'react-sidebar';
-import logo from '../images/logo.svg';
+import logo from '../images/logo.png';
+import bgImage from '../images/header.png';
 
 class Header extends Component {
   constructor() {
@@ -91,10 +92,7 @@ class Header extends Component {
         </div>
         <div className="background">
           <div className={'overlay'} />
-          <img
-            src="https://storage.googleapis.com/tutor-directory-schools/dir-static/photo-1460518451285-97b6aa326961.jpeg"
-            alt="Form"
-          />
+          <img src={bgImage} alt="Form" />
         </div>
         <div className="inner">
           <h4>Meet Form</h4>

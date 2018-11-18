@@ -7,7 +7,11 @@
     position: absolute;
     right:0;
     top: 0;
-    width: 150px;
+    width: 170px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
 
     @media (min-width: 1300px) {
      width: auto;
@@ -18,7 +22,11 @@
     position: absolute;
     left:0;
     bottom: 0;
-    width: 100px;
+    width: 120px;
+
+    @media (max-width: 1199px) {
+      display: none;
+    }
 
     @media (min-width: 1300px) {
       width: auto;
@@ -61,8 +69,28 @@
       background-color: #ffffff;
       padding: 40px 20px 50px;
 
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
       .left, .right {
         width: 45%;
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          width: 47%;
+        }
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+
+      .right {
+        .slider {
+          @media (max-width: 767px) {
+            margin-top: 50px;
+          }
+        }
       }
 
       h4 {
@@ -115,15 +143,31 @@
           display: flex;
           align-items: center;
 
+          @media (max-width: 767px) {
+            max-width: 322px;
+          }
+
           .label {
             font-family: $roboto;
             font-size: 16px;
             color: #9b9b9b;
             cursor: pointer;
 
+            @media (max-width: 991px) {
+              font-size: 14px;
+            }
+
+            @media (max-width: 480px) {
+              font-size: 13px;
+            }
+
             &:first-child {
               &:not(.active) {
                 margin-left: 20px;
+
+                @media (max-width: 991px) {
+                  margin-left: 10px;
+                }
               }
             }
 
@@ -134,11 +178,23 @@
 
               &.active {
                 padding: 11px 35px;
+
+                @media (max-width: 991px) {
+                  padding: 13px 27px;
+                }
+
+                @media (max-width: 480px) {
+                  padding: 13px 33px;
+                }
               }
             }
 
             &:not(:last-child) {
               margin-right: 27px;
+
+              @media (max-width: 991px) {
+                margin-right: 10px;
+              }
             }
 
             &.active {
@@ -146,6 +202,10 @@
               background-color: #78379d;
               color: #fff;
               padding: 11px 24px;
+
+              @media (max-width: 991px) {
+                padding: 13px 16px;
+              }
             }
           }
         }
@@ -168,12 +228,20 @@
           color: #1b1b1b;
           margin: 0;
 
+          @media (max-width: 550px) {
+            font-size: 18px;
+          }
+
           strong {
             font-family: $monserat;
             font-size: 36px;
             font-weight: 600;
             line-height: 1.33;
             letter-spacing: -2px;
+
+            @media (max-width: 550px) {
+              font-size: 20px;
+            }
           }
         }
 
@@ -185,6 +253,9 @@
           color: #9b9b9b;
           margin: 10px 0 0;
 
+          @media (max-width: 550px) {
+            font-size: 14px;
+          }
         }
       }
 
@@ -204,6 +275,10 @@
 
         &:hover {
           background-color: #3e8e41;
+        }
+
+        @media (max-width: 550px) {
+          padding: 14px 20px;
         }
       }
     }

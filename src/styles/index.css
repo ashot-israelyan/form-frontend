@@ -357,7 +357,10 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    width: 150px; }
+    width: 170px; }
+    @media (max-width: 991px) {
+      .calculator-container .calculator-image-top {
+        display: none; } }
     @media (min-width: 1300px) {
       .calculator-container .calculator-image-top {
         width: auto; } }
@@ -365,7 +368,10 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100px; }
+    width: 120px; }
+    @media (max-width: 1199px) {
+      .calculator-container .calculator-image-bottom {
+        display: none; } }
     @media (min-width: 1300px) {
       .calculator-container .calculator-image-bottom {
         width: auto; } }
@@ -405,8 +411,20 @@ body {
       justify-content: space-between;
       background-color: #ffffff;
       padding: 40px 20px 50px; }
+      @media (max-width: 767px) {
+        .calculator-container .calculator .inner {
+          flex-direction: column; } }
       .calculator-container .calculator .inner .left, .calculator-container .calculator .inner .right {
         width: 45%; }
+        @media (min-width: 768px) and (max-width: 991px) {
+          .calculator-container .calculator .inner .left, .calculator-container .calculator .inner .right {
+            width: 47%; } }
+        @media (max-width: 767px) {
+          .calculator-container .calculator .inner .left, .calculator-container .calculator .inner .right {
+            width: 100%; } }
+      @media (max-width: 767px) {
+        .calculator-container .calculator .inner .right .slider {
+          margin-top: 50px; } }
       .calculator-container .calculator .inner h4 {
         font-family: "Lucida Grande", sans-serif;
         margin: 0;
@@ -443,24 +461,48 @@ body {
           width: 100%;
           display: flex;
           align-items: center; }
+          @media (max-width: 767px) {
+            .calculator-container .calculator .inner .gym-calendar .gym-labels {
+              max-width: 322px; } }
           .calculator-container .calculator .inner .gym-calendar .gym-labels .label {
             font-family: "Roboto", sans-serif;
             font-size: 16px;
             color: #9b9b9b;
             cursor: pointer; }
+            @media (max-width: 991px) {
+              .calculator-container .calculator .inner .gym-calendar .gym-labels .label {
+                font-size: 14px; } }
+            @media (max-width: 480px) {
+              .calculator-container .calculator .inner .gym-calendar .gym-labels .label {
+                font-size: 13px; } }
             .calculator-container .calculator .inner .gym-calendar .gym-labels .label:first-child:not(.active) {
               margin-left: 20px; }
+              @media (max-width: 991px) {
+                .calculator-container .calculator .inner .gym-calendar .gym-labels .label:first-child:not(.active) {
+                  margin-left: 10px; } }
             .calculator-container .calculator .inner .gym-calendar .gym-labels .label:last-child:not(.active) {
               margin-right: 20px; }
             .calculator-container .calculator .inner .gym-calendar .gym-labels .label:last-child.active {
               padding: 11px 35px; }
+              @media (max-width: 991px) {
+                .calculator-container .calculator .inner .gym-calendar .gym-labels .label:last-child.active {
+                  padding: 13px 27px; } }
+              @media (max-width: 480px) {
+                .calculator-container .calculator .inner .gym-calendar .gym-labels .label:last-child.active {
+                  padding: 13px 33px; } }
             .calculator-container .calculator .inner .gym-calendar .gym-labels .label:not(:last-child) {
               margin-right: 27px; }
+              @media (max-width: 991px) {
+                .calculator-container .calculator .inner .gym-calendar .gym-labels .label:not(:last-child) {
+                  margin-right: 10px; } }
             .calculator-container .calculator .inner .gym-calendar .gym-labels .label.active {
               border-radius: 21px;
               background-color: #78379d;
               color: #fff;
               padding: 11px 24px; }
+              @media (max-width: 991px) {
+                .calculator-container .calculator .inner .gym-calendar .gym-labels .label.active {
+                  padding: 13px 16px; } }
     .calculator-container .calculator .results {
       padding: 16px 20px;
       display: flex;
@@ -474,12 +516,18 @@ body {
         letter-spacing: -0.7px;
         color: #1b1b1b;
         margin: 0; }
+        @media (max-width: 550px) {
+          .calculator-container .calculator .results .left h4 {
+            font-size: 18px; } }
         .calculator-container .calculator .results .left h4 strong {
           font-family: "Montserrat", sans-serif;
           font-size: 36px;
           font-weight: 600;
           line-height: 1.33;
           letter-spacing: -2px; }
+          @media (max-width: 550px) {
+            .calculator-container .calculator .results .left h4 strong {
+              font-size: 20px; } }
       .calculator-container .calculator .results .left p {
         font-family: "Roboto", sans-serif;
         font-size: 16px;
@@ -487,6 +535,9 @@ body {
         letter-spacing: -0.4px;
         color: #9b9b9b;
         margin: 10px 0 0; }
+        @media (max-width: 550px) {
+          .calculator-container .calculator .results .left p {
+            font-size: 14px; } }
       .calculator-container .calculator .results button {
         border-radius: 6px;
         background-color: #40be65;
@@ -500,3 +551,6 @@ body {
           transform: translateY(1px); }
         .calculator-container .calculator .results button:hover {
           background-color: #3e8e41; }
+        @media (max-width: 550px) {
+          .calculator-container .calculator .results button {
+            padding: 14px 20px; } }
