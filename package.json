@@ -45,14 +45,14 @@
   },
   "scripts": {
     "start-js": "react-scripts start",
-    "serve": "npm-run-all -p watch-css start-js",
+    "start": "npm-run-all -p watch-css start-js",
     "build-js": "GENERATE_SOURCEMAP=false react-scripts build",
     "build": "npm-run-all build-css build-js",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "cross-env NODE_ENV=production node ./server/index.js",
+    "serve": "cross-env NODE_ENV=production node ./server/index.js",
     "prettier-run": "prettier --write 'src/**/*.js'",
     "heroku-postbuild": "npm run build"
   },
