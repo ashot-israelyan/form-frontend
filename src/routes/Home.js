@@ -30,7 +30,7 @@ class Home extends Component {
         />
         <HowItWorks />
         <Calculator />
-        <ReformaBox/>
+        <ReformaBox />
       </div>
     );
   }

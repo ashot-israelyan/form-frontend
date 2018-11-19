@@ -1,6 +1,7 @@
 import React from 'react';
 import BeforeAfterSlider from 'react-before-after-slider';
 import { connect } from 'react-redux';
+import { isServer } from '../store';
 import slider1 from '../images/silder-compare-1.jpg';
 import slider2 from '../images/silder-compare-2.jpg';
 
@@ -37,13 +38,15 @@ const ReformaBox = ({ screen: { layout, size } }) => {
         </div>
 
         <div className="center">
-          <BeforeAfterSlider
-            before={slider1}
-            after={slider2}
-            width={compareSize}
-            height={layout === 'mobile' ? 300 : 454}
-            className={'compare-box'}
-          />
+          {!isServer && (
+            <BeforeAfterSlider
+              before={slider1}
+              after={slider2}
+              width={compareSize}
+              height={layout === 'mobile' ? 300 : 454}
+              className={'compare-box'}
+            />
+          )}
         </div>
 
         <div className={'right'}>
