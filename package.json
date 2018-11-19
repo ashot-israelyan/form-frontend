@@ -28,6 +28,7 @@
     "query-string": "^6.2.0",
     "rc-slider": "^8.6.3",
     "react": "^16.5.2",
+    "react-before-after-slider": "^1.0.4",
     "react-dom": "^16.5.2",
     "react-frontload": "^1.0.3",
     "react-helmet": "^5.2.0",

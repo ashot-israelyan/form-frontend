@@ -1,0 +1,113 @@
+.reforma-box {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  .top {
+    h2 {
+      @include heading2();
+      font-family: $lucia;
+      font-weight: bold;
+      line-height: 1.36;
+      letter-spacing: normal;
+    }
+
+    .description {
+      @include description();
+    }
+  }
+
+  .inner {
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 33px auto 0;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+
+    .left {
+      margin-right: 38px;
+
+      @media (max-width: 991px) {
+        margin-right: 0;
+      }
+
+      .reform-desc {
+        text-align: right;
+
+        &.top {
+          margin-top: 30px;
+        }
+
+        &.bottom {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .center {
+      @media (max-width: 991px) {
+        overflow: hidden;
+        margin: 40px auto 0;
+      }
+    }
+
+    .right {
+      margin-left: 33px;
+
+      @media (max-width: 991px) {
+        margin-left: 0;
+      }
+
+      .reform-desc {
+        &.top {
+          margin-top: 50px;
+        }
+
+        &.bottom {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .reform-desc {
+      @media (max-width: 991px) {
+        text-align: center!important;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+
+      h4 {
+        font-family: $arial;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 1.71;
+        letter-spacing: 2px;
+        color: #1b1b1b;
+        margin: 0
+      }
+
+      p {
+        font-family: $roboto;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #9b9b9b;
+        margin: 12px 0 0;
+      }
+    }
+  }
+
+  .select-plan {
+    text-align: center;
+    margin-top: 36px;
+
+    button {
+      @include button();
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.14;
+      padding: 13px 52px;
+    }
+  }
+}

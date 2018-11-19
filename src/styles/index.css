@@ -351,7 +351,7 @@ body {
 
 .calculator-container {
   background-color: rgba(242, 242, 242, 0.5);
-  padding: 92px 20px 126px;
+  padding: 92px 20px 100px;
   position: relative; }
   .calculator-container .calculator-image-top {
     position: absolute;
@@ -367,7 +367,7 @@ body {
   .calculator-container .calculator-image-bottom {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -20px;
     width: 120px; }
     @media (max-width: 1199px) {
       .calculator-container .calculator-image-bottom {
@@ -543,9 +543,9 @@ body {
         background-color: #40be65;
         border: none;
         color: #ffffff;
-        padding: 14px 36.23px;
         outline: none;
-        cursor: pointer; }
+        cursor: pointer;
+        padding: 14px 36.23px; }
         .calculator-container .calculator .results button:active {
           background-color: #3e8e41;
           transform: translateY(1px); }
@@ -554,3 +554,101 @@ body {
         @media (max-width: 550px) {
           .calculator-container .calculator .results button {
             padding: 14px 20px; } }
+
+.reforma-box {
+  padding-top: 40px;
+  padding-bottom: 70px; }
+  .reforma-box .top h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    text-align: center;
+    color: #1b1b1b;
+    margin: 0;
+    font-family: "Lucida Grande", sans-serif;
+    font-weight: bold;
+    line-height: 1.36;
+    letter-spacing: normal; }
+    @media (max-width: 767px) {
+      .reforma-box .top h2 {
+        font-size: 24px; } }
+  .reforma-box .top .description {
+    text-align: center;
+    max-width: 460px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.56;
+    color: #9b9b9b;
+    margin: 30px auto 0; }
+  .reforma-box .inner {
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 33px auto 0; }
+    @media (max-width: 991px) {
+      .reforma-box .inner {
+        flex-direction: column; } }
+    .reforma-box .inner .left {
+      margin-right: 38px; }
+      @media (max-width: 991px) {
+        .reforma-box .inner .left {
+          margin-right: 0; } }
+      .reforma-box .inner .left .reform-desc {
+        text-align: right; }
+        .reforma-box .inner .left .reform-desc.top {
+          margin-top: 30px; }
+        .reforma-box .inner .left .reform-desc.bottom {
+          margin-top: 50px; }
+    @media (max-width: 991px) {
+      .reforma-box .inner .center {
+        overflow: hidden;
+        margin: 40px auto 0; } }
+    .reforma-box .inner .right {
+      margin-left: 33px; }
+      @media (max-width: 991px) {
+        .reforma-box .inner .right {
+          margin-left: 0; } }
+      .reforma-box .inner .right .reform-desc.top {
+        margin-top: 50px; }
+      .reforma-box .inner .right .reform-desc.bottom {
+        margin-top: 50px; }
+    @media (max-width: 991px) {
+      .reforma-box .inner .reform-desc {
+        text-align: center !important;
+        max-width: 450px;
+        margin: 0 auto; } }
+    .reforma-box .inner .reform-desc h4 {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.71;
+      letter-spacing: 2px;
+      color: #1b1b1b;
+      margin: 0; }
+    .reforma-box .inner .reform-desc p {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #9b9b9b;
+      margin: 12px 0 0; }
+  .reforma-box .select-plan {
+    text-align: center;
+    margin-top: 36px; }
+    .reforma-box .select-plan button {
+      border-radius: 6px;
+      background-color: #40be65;
+      border: none;
+      color: #ffffff;
+      outline: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.14;
+      padding: 13px 52px; }
+      .reforma-box .select-plan button:active {
+        background-color: #3e8e41;
+        transform: translateY(1px); }
+      .reforma-box .select-plan button:hover {
+        background-color: #3e8e41; }

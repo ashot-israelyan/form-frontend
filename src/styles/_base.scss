@@ -31,6 +31,7 @@ body {
 $roboto: 'Roboto', sans-serif;
 $lucia: 'Lucida Grande', sans-serif;
 $monserat: 'Montserrat', sans-serif;
+$arial: Arial, sans-serif;
 
 @mixin heading2 {
   font-family: 'Montserrat', sans-serif;
@@ -43,6 +44,34 @@ $monserat: 'Montserrat', sans-serif;
 
   @media (max-width: 767px) {
     font-size: 24px;
+  }
+}
+
+@mixin description {
+  text-align: center;
+  max-width: 460px;
+  font-family: $roboto;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #9b9b9b;
+  margin: 30px auto 0;
+}
+
+@mixin button {
+  border-radius: 6px;
+  background-color: #40be65;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+  }
+
+  &:hover {
+    background-color: #3e8e41;
   }
 }
 

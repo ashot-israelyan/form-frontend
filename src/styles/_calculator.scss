@@ -1,6 +1,6 @@
 .calculator-container {
   background-color: rgba(242, 242, 242, 0.5);
-  padding: 92px 20px 126px;
+  padding: 92px 20px 100px;
   position: relative;
 
   .calculator-image-top {
@@ -21,7 +21,7 @@
   .calculator-image-bottom {
     position: absolute;
     left:0;
-    bottom: 0;
+    bottom: -20px;
     width: 120px;
 
     @media (max-width: 1199px) {
@@ -43,13 +43,7 @@
     }
 
     .description {
-      text-align: center;
-      max-width: 460px;
-      font-family: $roboto;
-      font-size: 18px;
-      line-height: 1.56;
-      color: #9b9b9b;
-      margin: 30px auto 0;
+      @include description();
     }
   }
 
@@ -260,22 +254,8 @@
       }
 
       button {
-        border-radius: 6px;
-        background-color: #40be65;
-        border: none;
-        color: #ffffff;
+        @include button();
         padding: 14px 36.23px;
-        outline: none;
-        cursor: pointer;
-
-        &:active {
-          background-color: #3e8e41;
-          transform: translateY(1px);
-        }
-
-        &:hover {
-          background-color: #3e8e41;
-        }
 
         @media (max-width: 550px) {
           padding: 14px 20px;

@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 
 import HowItWorks from '../components/HowItWorks';
 import Calculator from '../components/Calculator';
+import ReformaBox from '../components/ReformaBox';
 import { logoutUser } from '../modules/auth';
 
 const frontload = async props => await props.logoutUser();
@@ -29,6 +30,7 @@ class Home extends Component {
         />
         <HowItWorks />
         <Calculator />
+        <ReformaBox/>
       </div>
     );
   }
