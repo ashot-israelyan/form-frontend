@@ -705,11 +705,11 @@ body {
           .calculator-container .calculator .results button {
             padding: 14px 20px; } }
 
-.reforma-box {
+.about-reforma-box {
   padding-top: 40px;
   padding-bottom: 70px; }
 
-.reforma-box .top h2 {
+.about-reforma-box .top h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 600;
@@ -723,10 +723,10 @@ body {
     letter-spacing: normal; }
 
 @media (max-width: 767px) {
-      .reforma-box .top h2 {
+      .about-reforma-box .top h2 {
         font-size: 24px; } }
 
-.reforma-box .top .description {
+.about-reforma-box .top .description {
     text-align: center;
     max-width: 460px;
     font-family: "Roboto", sans-serif;
@@ -735,7 +735,7 @@ body {
     color: #9b9b9b;
     margin: 30px auto 0; }
 
-.reforma-box .inner {
+.about-reforma-box .inner {
     display: -webkit-box;
     display: flex;
     padding: 0 15px;
@@ -745,52 +745,52 @@ body {
     margin: 33px auto 0; }
 
 @media (max-width: 991px) {
-      .reforma-box .inner {
+      .about-reforma-box .inner {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
                 flex-direction: column; } }
 
-.reforma-box .inner .left {
+.about-reforma-box .inner .left {
       margin-right: 38px; }
 
 @media (max-width: 991px) {
-        .reforma-box .inner .left {
+        .about-reforma-box .inner .left {
           margin-right: 0; } }
 
-.reforma-box .inner .left .reform-desc {
+.about-reforma-box .inner .left .reform-desc {
         text-align: right; }
 
-.reforma-box .inner .left .reform-desc.top {
+.about-reforma-box .inner .left .reform-desc.top {
           margin-top: 30px; }
 
-.reforma-box .inner .left .reform-desc.bottom {
+.about-reforma-box .inner .left .reform-desc.bottom {
           margin-top: 50px; }
 
 @media (max-width: 991px) {
-      .reforma-box .inner .center {
+      .about-reforma-box .inner .center {
         overflow: hidden;
         margin: 40px auto 0; } }
 
-.reforma-box .inner .right {
+.about-reforma-box .inner .right {
       margin-left: 33px; }
 
 @media (max-width: 991px) {
-        .reforma-box .inner .right {
+        .about-reforma-box .inner .right {
           margin-left: 0; } }
 
-.reforma-box .inner .right .reform-desc.top {
+.about-reforma-box .inner .right .reform-desc.top {
         margin-top: 50px; }
 
-.reforma-box .inner .right .reform-desc.bottom {
+.about-reforma-box .inner .right .reform-desc.bottom {
         margin-top: 50px; }
 
 @media (max-width: 991px) {
-      .reforma-box .inner .reform-desc {
+      .about-reforma-box .inner .reform-desc {
         text-align: center !important;
         max-width: 450px;
         margin: 0 auto; } }
 
-.reforma-box .inner .reform-desc h4 {
+.about-reforma-box .inner .reform-desc h4 {
       font-family: Arial, sans-serif;
       font-size: 16px;
       font-weight: 900;
@@ -799,18 +799,18 @@ body {
       color: #1b1b1b;
       margin: 0; }
 
-.reforma-box .inner .reform-desc p {
+.about-reforma-box .inner .reform-desc p {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
       line-height: 1.5;
       color: #9b9b9b;
       margin: 12px 0 0; }
 
-.reforma-box .select-plan {
+.about-reforma-box .select-plan {
     text-align: center;
     margin-top: 36px; }
 
-.reforma-box .select-plan button {
+.about-reforma-box .select-plan button {
       border-radius: 6px;
       background-color: #40be65;
       border: none;
@@ -822,10 +822,240 @@ body {
       line-height: 1.14;
       padding: 13px 52px; }
 
-.reforma-box .select-plan button:active {
+.about-reforma-box .select-plan button:active {
         background-color: #3e8e41;
         -webkit-transform: translateY(1px);
                 transform: translateY(1px); }
 
-.reforma-box .select-plan button:hover {
+.about-reforma-box .select-plan button:hover {
         background-color: #3e8e41; }
+
+.reforma-boxes {
+  background-color: rgba(242, 242, 242, 0.5);
+  padding: 65px 15px; }
+
+.reforma-boxes .top h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    text-align: center;
+    color: #1b1b1b;
+    margin: 0;
+    font-family: "Lucida Grande", sans-serif;
+    font-weight: bold;
+    line-height: 1.36;
+    letter-spacing: normal; }
+
+@media (max-width: 767px) {
+      .reforma-boxes .top h2 {
+        font-size: 24px; } }
+
+.reforma-boxes .top .description {
+    text-align: center;
+    max-width: 460px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.56;
+    color: #9b9b9b;
+    margin: 30px auto 0; }
+
+.reforma-boxes .inner {
+    max-width: 1100px;
+    margin: 56px auto 0; }
+
+.reforma-boxes .inner .box {
+      border-radius: 4px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+      background-color: #ffffff; }
+
+.reforma-boxes .inner .box .image {
+        position: relative;
+        padding-bottom: 50%; }
+
+.reforma-boxes .inner .box .image img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover; }
+
+.reforma-boxes .inner .box .container {
+        padding: 24px 0 30px 30px; }
+
+.reforma-boxes .inner .box .container h4 {
+          margin: 0;
+          font-family: "Lucida Grande", sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          color: #1b1b1b; }
+
+.reforma-boxes .inner .box .container p {
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
+          color: #9b9b9b;
+          margin: 22px 0 0; }
+
+.reforma-boxes .inner .box .container button {
+          padding: 8px 40px;
+          border-radius: 100px;
+          outline: none;
+          border: 2px solid #40be65;
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.14;
+          text-align: center;
+          color: #40be65;
+          cursor: pointer;
+          margin-top: 29px; }
+
+.reforma-boxes .inner .box.try {
+        background-color: #78379d; }
+
+.reforma-boxes .inner .box.try .image {
+          padding: 0;
+          max-width: 160px;
+          margin: 0 auto; }
+
+.reforma-boxes .inner .box.try .image img {
+            position: relative;
+            width: 100%;
+            margin-top: 50px; }
+
+.reforma-boxes .inner .box.try .container {
+          text-align: center;
+          padding: 25px 50px; }
+
+.reforma-boxes .inner .box.try .container h4 {
+            color: #fff; }
+
+.reforma-boxes .inner .box.try .container p {
+            color: #fff; }
+
+.reforma-boxes .inner .box.try .container button {
+            background-color: #edc054;
+            color: #fff;
+            border: none;
+            margin-top: 39px; }
+
+.reforma-boxes .inner .suggestions .options {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+              align-items: center;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05); }
+
+.reforma-boxes .inner .suggestions .options .option {
+        padding: 9px 28px;
+        font-family: "Lucida Grande", sans-serif;
+        font-size: 17px;
+        text-align: center;
+        color: #1b1b1b; }
+
+.reforma-boxes .inner .suggestions .options .option.active {
+          background-color: #40be65;
+          color: #fff;
+          border-radius: 6px;
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05); }
+
+.reforma-boxes .inner .suggestions .container {
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+      background-color: #ffffff;
+      border-radius: 4px;
+      margin-top: 12px;
+      padding: 24px 30px 30px; }
+
+.reforma-boxes .inner .suggestions .container h5 {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        color: rgba(155, 155, 155, 0.5); }
+
+.reforma-boxes .inner .suggestions .container h4 {
+        font-family: "Lucida Grande", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1b1b1b;
+        margin: 10px 0 0; }
+
+.reforma-boxes .inner .suggestions .container p {
+        margin: 0; }
+
+.reforma-boxes .inner .suggestions .container p.amount {
+          font-family: "Lucida Grande", sans-serif;
+          font-size: 17px;
+          font-weight: bold;
+          color: #1b1b1b;
+          margin-top: 25px; }
+
+.reforma-boxes .inner .suggestions .container p.amount span {
+            color: #40be65;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600; }
+
+.reforma-boxes .inner .suggestions .container p.desc {
+          margin-top: 10px;
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #9b9b9b; }
+
+.reforma-boxes .inner .suggestions .container .price {
+        margin-top: 17px;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        color: rgba(155, 155, 155, 0.5);
+        line-height: 20px; }
+
+.reforma-boxes .inner .suggestions .container .price strong {
+          display: block;
+          font-size: 24px;
+          font-family: "Lucida Grande", sans-serif;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #1b1b1b;
+          font-weight: bold; }
+
+.reforma-boxes .inner .suggestions .container button {
+        margin-top: 36px;
+        border-radius: 6px;
+        background-color: #40be65;
+        border: none;
+        color: #ffffff;
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+        height: 40px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        line-height: 1.14; }
+
+.reforma-boxes .inner .suggestions .container button:active {
+          background-color: #3e8e41;
+          -webkit-transform: translateY(1px);
+                  transform: translateY(1px); }
+
+.reforma-boxes .inner .suggestions .container button:hover {
+          background-color: #3e8e41; }
+
+.reforma-boxes p.order-info {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #c2c2c2;
+    text-align: center;
+    margin-top: 8px; }

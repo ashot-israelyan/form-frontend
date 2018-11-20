@@ -5,7 +5,7 @@ import { isServer } from '../store';
 import slider1 from '../images/silder-compare-1.jpg';
 import slider2 from '../images/silder-compare-2.jpg';
 
-const ReformaBox = ({ screen: { layout, size } }) => {
+const AboutReformaBox = ({ screen: { layout, size } }) => {
   let compareSize = (size * 54) / 100;
 
   if (layout !== 'desktop') {
@@ -13,7 +13,7 @@ const ReformaBox = ({ screen: { layout, size } }) => {
   }
 
   return (
-    <div className={'reforma-box'}>
+    <div className={'about-reforma-box'}>
       <div className="top">
         <h2>Что такое реформа-бокс</h2>
         <hr className="divider" />
@@ -74,4 +74,4 @@ const ReformaBox = ({ screen: { layout, size } }) => {
   );
 };
 
-export default connect(({ settings }) => ({ screen: settings.screen }))(ReformaBox);
+export default connect(({ settings }) => ({ screen: settings.screen }))(AboutReformaBox);

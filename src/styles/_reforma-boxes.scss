@@ -1,0 +1,233 @@
+.reforma-boxes {
+  background-color: rgba(242, 242, 242, 0.5);
+  padding: 65px 15px;
+
+  .top {
+    h2 {
+      @include heading2();
+      font-family: $lucia;
+      font-weight: bold;
+      line-height: 1.36;
+      letter-spacing: normal;
+    }
+
+    .description {
+      @include description();
+    }
+  }
+
+  .inner {
+    max-width: 1100px;
+    margin: 56px auto 0;
+
+    .box {
+      border-radius: 4px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+      background-color: #ffffff;
+
+      .image {
+        position: relative;
+        padding-bottom: 50%;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+
+      .container {
+        padding: 24px 0 30px 30px;
+
+        h4 {
+          margin: 0;
+          font-family: $lucia;
+          font-size: 24px;
+          font-weight: bold;
+          color: #1b1b1b;
+        }
+
+        p {
+          font-family: $roboto;
+          font-size: 16px;
+          color: #9b9b9b;
+          margin: 22px 0 0;
+        }
+
+        button {
+          padding: 8px 40px;
+          border-radius: 100px;
+          outline: none;
+          border: 2px solid #40be65;
+          font-family: $roboto;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.14;
+          text-align: center;
+          color: #40be65;
+          cursor: pointer;
+          margin-top: 29px;
+        }
+      }
+
+      &.try {
+        background-color: #78379d;
+
+        .image {
+          padding: 0;
+          max-width: 160px;
+          margin: 0 auto;
+
+          img {
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+          }
+        }
+
+        .container {
+          text-align: center;
+          padding: 25px 50px;
+
+          h4 {
+            color: #fff;
+          }
+
+          p {
+            color: #fff;
+          }
+
+          button {
+            background-color: #edc054;
+            color: #fff;
+            border: none;
+            margin-top: 39px;
+          }
+        }
+      }
+    }
+
+    .suggestions {
+      .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+
+        .option {
+          padding: 9px 28px;
+          font-family: $lucia;
+          font-size: 17px;
+          text-align: center;
+          color: #1b1b1b;
+
+          &.active {
+            background-color: #40be65;
+            color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+
+      .container {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+        background-color: #ffffff;
+        border-radius: 4px;
+        margin-top: 12px;
+        padding: 24px 30px 30px;
+
+        h5 {
+          margin: 0;
+          font-family: $roboto;
+          font-size: 12px;
+          font-weight: normal;
+          color: rgba(155, 155, 155, 0.5);
+        }
+
+        h4 {
+          font-family: $lucia;
+          font-size: 24px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #1b1b1b;
+          margin: 10px 0 0;
+        }
+
+        p {
+          margin: 0;
+
+          &.amount {
+            font-family: $lucia;
+            font-size: 17px;
+            font-weight: bold;
+            color: #1b1b1b;
+            margin-top: 25px;
+
+            span {
+              color: #40be65;
+              font-family: $monserat;
+              font-weight: 600;
+            }
+          }
+
+          &.desc {
+            margin-top: 10px;
+            font-family: $roboto;
+            font-size: 14px;
+            font-weight: 500;
+            color: #9b9b9b;
+          }
+        }
+
+        .price {
+          margin-top: 17px;
+          font-family: $roboto;
+          font-size: 12px;
+          color: rgba(155, 155, 155, 0.5);
+          line-height: 20px;
+          
+          strong {
+            display: block;
+            font-size: 24px;
+            font-family: $lucia;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #1b1b1b;
+            font-weight: bold;
+          }
+        }
+
+        button {
+          margin-top: 36px;
+          @include button();
+          width: 100%;
+          height: 40px;
+          font-family: $roboto;
+          font-weight: 500;
+          line-height: 1.14;
+        }
+      }
+    }
+  }
+
+  p.order-info {
+    font-family: $roboto;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #c2c2c2;
+    text-align: center;
+    margin-top: 8px
+  }
+}
